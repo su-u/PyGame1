@@ -1,1 +1,7 @@
 /env/
+/.vs/
+
+*.pyc
+*.png
+*.pyc
+*.pyo
