@@ -10,7 +10,7 @@ class DisplaySizeClass(object):
     def __init__(self, size_x, size_y, asp):
        self.__diplay_size_x = size_x
        self.__diplay_size_y = size_y
-       self.__base_size_x, self.__base_size_y = Aspect.Aspect.MaxDisplaySize(asp)
+       self.__base_size_x, self._w_base_size_y = Aspect.AspectEnum.MaxDisplaySize(asp)
 
     def get_x(self):
         return self.__diplay_size_x
@@ -21,4 +21,4 @@ class DisplaySizeClass(object):
     def get_display_size(self):
         return (self.__diplay_size_x, self.__diplay_size_y)
 
-
+    

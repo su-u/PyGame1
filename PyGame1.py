@@ -1,10 +1,10 @@
 import pygame
 from pygame.locals import *
 import sys
-import PyGameDisplay
+from PyGameDisplay import DisplaySize, Aspect
 
 def main():
-    dis = PyGameDisplay.DisplaySize(1280, 720, Aspect.AspectEnum.A16_9)
+    dis = DisplaySize.DisplaySizeClass(1920, 1080, Aspect.AspectEnum.A16_9)
     pygame.init() # 初期化
     screen = pygame.display.set_mode(dis.get_display_size()) # ウィンドウサイズの指定
     pygame.display.set_caption("Pygame Test") # ウィンドウの上の方に出てくるアレの指定
