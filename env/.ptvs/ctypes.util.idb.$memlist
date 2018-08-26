@@ -1,6 +1,7 @@
 sys
 _dyld_find
 tempfile
+_findLib_prefix
 re
 find_msvcrt
 find_library

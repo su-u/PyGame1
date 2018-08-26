@@ -4,9 +4,9 @@ import sys
 import PyGameDisplay
 
 def main():
-    dis = PyGameDisplay.DisplaySize(1280, 720, Aspect.Aspect.A16_9)
+    dis = PyGameDisplay.DisplaySize(1280, 720, Aspect.AspectEnum.A16_9)
     pygame.init() # 初期化
-    screen = pygame.display.set_mode(dis.get_display_size) # ウィンドウサイズの指定
+    screen = pygame.display.set_mode(dis.get_display_size()) # ウィンドウサイズの指定
     pygame.display.set_caption("Pygame Test") # ウィンドウの上の方に出てくるアレの指定
 
     while(True):

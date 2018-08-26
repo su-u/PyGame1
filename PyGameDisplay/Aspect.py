@@ -1,6 +1,6 @@
-from enum import IntEnum
+from enum import IntEnum, auto
 
-class Aspect(IntEnum):
+class AspectEnum(IntEnum):
     """description of class"""
     A4_3  = auto()
     A16_9 = auto()

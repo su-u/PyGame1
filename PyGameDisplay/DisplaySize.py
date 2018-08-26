@@ -1,12 +1,11 @@
-import Aspect
-
-class DisplaySize(object):
+from . import Aspect
+class DisplaySizeClass(object):
     """description of class"""
     __base_size_x = 0
     __base_size_y = 0
     __diplay_size_x = 0
     __diplay_size_y = 0
-    __aspect
+    __aspect = 0
 
     def __init__(self, size_x, size_y, asp):
        self.__diplay_size_x = size_x

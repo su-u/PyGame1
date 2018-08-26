@@ -4,9 +4,9 @@ utils
 locale
 UpdatingDefaultsHelpFormatter
 InstallationError
-__main__
-operations
+req
 models
+__main__
 baseparser
 securetransport
 wheel
@@ -18,7 +18,7 @@ mercurial
 status_codes
 get_installed_distributions
 deprecation
-_vendor
+compat
 CommandError
 commands_dict
 bazaar
@@ -35,13 +35,13 @@ PipError
 ssl
 parseopts
 logger
-req
+operations
 sys
 commands
 FrozenRequirement
 logging
 subversion
-compat
+_vendor
 autocomplete
 os
 ConfigOptionParser
