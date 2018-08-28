@@ -1,5 +1,5 @@
 from . import Aspect
-class DisplaySizeClass(object):
+class DisplaySize(object):
     """description of class"""
     __base_size_x = 0
     __base_size_y = 0
