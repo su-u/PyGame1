@@ -14,6 +14,7 @@ class Player(pygame.sprite.Sprite):
         pygame.sprite.Sprite.__init__(self, self.containers)
         self.rect = self.image.get_rect()
         self.rect.bottom = SCR_RECT.bottom  # プレイヤーが画面の一番下
+
     def update(self):
         # 押されているキーをチェック
         pressed_keys = pygame.key.get_pressed()
@@ -25,4 +26,4 @@ class Player(pygame.sprite.Sprite):
         self.rect.clamp_ip(SCR_RECT)
 
         if pressed_keys[K_SPACE]:
-            bullet.Bullet((self.rect.left, self.rect.top)) # ボールを作成)
+            bullet.Bullet((self.rect.centerx, self.rect.top)) # ボールを作成)
