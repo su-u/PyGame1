@@ -1,11 +1,20 @@
 from . import Aspect
+import pygame;
+from pygame.locals import *
+import os
+import sys
+
 class DisplaySize(object):
+
+    PLAYER_SIZE = (50,50)
+
     """description of class"""
-    __base_size_x = 0
-    __base_size_y = 0
-    __diplay_size_x = 0
-    __diplay_size_y = 0
+    __base_size = Rect(0, 0, 0, 0)
+    __diplay_size = Rect(0, 0, 0, 0)
+    
     __aspect = 0
+
+    __player_size = Rect(0,0,0,0)
 
     def __init__(self, size_x, size_y, asp):
        self.__diplay_size_x = size_x
