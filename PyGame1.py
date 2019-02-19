@@ -13,7 +13,7 @@ def main():
     #screen = pygame.display.set_mode(dis.get_display_size()) # ウィンドウサイズの指定
     #pygame.display.set_caption("Pygame Test") # ウィンドウの上の方に出てくるアレの指定
     pygame.init();
-    screen = pygame.display.set_mode(WindowManager.WindowManager.SCR_RECT)
+    screen = pygame.display.set_mode(DisplaySize.DisplaySize.get_display_size)
     pygame.display.set_caption(u"Game")
 
     # スプライトグループを作成して登録

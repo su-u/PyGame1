@@ -28,6 +28,9 @@
     <Compile Include="Enemy.py">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="FileManager.py">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="Player.py">
       <SubType>Code</SubType>
     </Compile>
@@ -39,9 +42,6 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="PyGameDisplay\__init__.py">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="WindowManager.py">
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>
