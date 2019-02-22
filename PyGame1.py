@@ -6,23 +6,18 @@ from PyGameDisplay import DisplaySize, Aspect
 import Player
 import bullet
 import traceback
+import FileManager
 
 def main():
-    #dis = DisplaySize.DisplaySize(1920, 1080, Aspect.AspectEnum.A16_9)
-    #pygame.init() # 初期化
-    #screen = pygame.display.set_mode(dis.get_display_size()) # ウィンドウサイズの指定
-    #pygame.display.set_caption("Pygame Test") # ウィンドウの上の方に出てくるアレの指定
     pygame.init();
-    screen = pygame.display.set_mode(DisplaySize.DisplaySize.get_display_size)
+    display = DisplaySize.DisplaySize(1280,720, Aspect.AspectEnum.A16_9)
+    screen = pygame.display.set_mode(display.get_display_size())
     pygame.display.set_caption(u"Game")
 
-    # スプライトグループを作成して登録
     all = pygame.sprite.RenderUpdates()
     Player.Player.containers = all
-    # スプライトの画像を登録
-    Player.Player.image = load_image("player.png")
-    # 自機を作成
-    plyaer = Player.Player()
+    Player.Player.image = FileManager.FileManager.load_image("player.png")
+    player = Player.Player(display.get_display_rect)
     
     bullet.Bullet.containers = all
 

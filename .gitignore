@@ -3,6 +3,8 @@
 *.pyc
 *.pyo
 __pycache__/*
+.pyc
+*/__pycache__/*
 
 env/
 .vs/

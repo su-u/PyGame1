@@ -13,7 +13,6 @@ class Bullet(pygame.sprite.Sprite):
        self.rect.center = pos
 
     def update(self):
-        # 上に飛んでいき、画面外に出たら消滅
         self.rect.move_ip(0, -self.speed)
         if self.rect.top < 0:
             self.kill()
