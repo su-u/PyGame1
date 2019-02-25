@@ -22,8 +22,14 @@ class Player(pygame.sprite.Sprite):
 
         if pressed_keys[K_LEFT]:
             self.rect.move_ip(-self.speed, 0)
-        elif pressed_keys[K_RIGHT]:
+        if pressed_keys[K_RIGHT]:
             self.rect.move_ip(self.speed, 0)
+        if pressed_keys[K_UP]:
+            self.rect.move_ip(0, -self.speed)
+        if pressed_keys[K_DOWN]:
+            self.rect.move_ip(0, self.speed)
+
+
         self.rect.clamp_ip(self.display)
 
         if pressed_keys[K_SPACE]:
