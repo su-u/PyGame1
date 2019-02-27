@@ -16,7 +16,7 @@ def main():
 
     all = pygame.sprite.RenderUpdates()
     Player.Player.containers = all
-    Player.Player.image = FileManager.FileManager.load_image("player.png")
+    Player.Player.image = FileManager.FileManager.load_image("player.png", 150, 150)
     player = Player.Player(display.get_display_rect)
     
     bullet.Bullet.containers = all

@@ -5,10 +5,8 @@ import os
 import sys
 
 class DisplaySize(object):
-
-    PLAYER_SIZE = (50,50)
-
     """description of class"""
+
     __base_size = Rect(0, 0, 0, 0)
     __diplay_size = Rect(0, 0, 0, 0)
     
