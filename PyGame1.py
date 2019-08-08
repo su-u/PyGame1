@@ -9,7 +9,7 @@ import traceback
 import FileManager
 
 def main():
-    pygame.init();
+    pygame.init()
     display = DisplaySize.DisplaySize(1280,720, Aspect.AspectEnum.A16_9)
     screen = pygame.display.set_mode(display.get_display_size())
     pygame.display.set_caption(u"Game")
