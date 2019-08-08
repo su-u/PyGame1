@@ -17,7 +17,6 @@ class Player(pygame.sprite.Sprite):
         self.rect.bottom = self.display.bottom
 
     def update(self):
-
         pressed_keys = pygame.key.get_pressed()
 
         if pressed_keys[K_LEFT]:
