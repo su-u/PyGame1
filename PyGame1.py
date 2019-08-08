@@ -5,12 +5,13 @@ import sys
 from PyGameDisplay import DisplaySize, Aspect
 import Player
 import bullet
-import traceback
+
 import FileManager
+
 
 def main():
     pygame.init()
-    display = DisplaySize.DisplaySize(1280,720, Aspect.AspectEnum.A16_9)
+    display = DisplaySize.DisplaySize(1280, 720, Aspect.AspectEnum.A16_9)
     screen = pygame.display.set_mode(display.get_display_size())
     pygame.display.set_caption(u"Game")
 
@@ -18,7 +19,7 @@ def main():
     Player.Player.containers = all
     Player.Player.image = FileManager.FileManager.load_image("player.png", 150, 150)
     player = Player.Player(display.get_display_rect)
-    
+
     bullet.Bullet.containers = all
 
     clock = pygame.time.Clock()
@@ -35,7 +36,6 @@ def main():
             elif event.type == KEYDOWN and event.key == K_ESCAPE:
                 pygame.quit()
                 sys.exit()
-
 
 
 if __name__ == "__main__":

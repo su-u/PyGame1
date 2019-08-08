@@ -1,7 +1,9 @@
 import pygame
 from pygame.locals import *
 import sys
+import traceback
 import os
+
 
 class FileManager(object):
     """ファイル処理関係"""
@@ -12,12 +14,12 @@ class FileManager(object):
         filename = os.path.join("data", filename)
         try:
             image = pygame.image.load(filename)
-        except (pygame.error, message):
+        except pygame.error as message:
             print("Cannot load image:"), filename
             traceback.print_exc()
             raise (SystemExit, message)
         image = image.convert()
-        #if colorkey is not None:
+        # if colorkey is not None:
         #    if colorkey is -1:
         #        colorkey = image.get_at((0,0))
         #    image.set_colorkey(colorkey, RLEACCEL)
@@ -25,4 +27,4 @@ class FileManager(object):
         if width is None:
             return image
         else:
-            return pygame.transform.scale(image,(width,height))
+            return pygame.transform.scale(image, (width, height))

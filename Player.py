@@ -11,7 +11,7 @@ class Player(pygame.sprite.Sprite):
     display = Rect(0, 0, 1280, 720)
 
     def __init__(self, _display):
-        #self.display = _display
+        # self.display = _display
         pygame.sprite.Sprite.__init__(self, self.containers)
         self.rect = self.image.get_rect()
         self.rect.bottom = self.display.bottom
@@ -28,7 +28,6 @@ class Player(pygame.sprite.Sprite):
             self.rect.move_ip(0, -self.speed)
         if pressed_keys[K_DOWN]:
             self.rect.move_ip(0, self.speed)
-
 
         self.rect.clamp_ip(self.display)
 
